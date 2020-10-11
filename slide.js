@@ -61,18 +61,20 @@ function clicked_search(){
     if(clicknum==1){
         
         $(".popup").css("opacity","0.8");
+        $(".popup").css("z-index","2");
         clicknum=2;
     }
     else{
         // $(".popup").css("z-index","-1");
         $(".popup").css("opacity","0");
-        
+        $(".popup").css("z-index","1");
         clicknum=1;
     }
 }
-function clicked_menu(){
-    if(clickmenu){
+function clicked_menu(a){
+    if(clickmenu && a!=1){
         clickmenu=false;
+        $(".menu").css("diplay","block");
         $(".menu").css("transform","translateX(0)");
         $(".menuline-1").css("transform","translateY(12px) rotate(45deg) ");
         $(".menuline-2").css("transform","translateY(0px) rotate(-45deg) ");
@@ -80,7 +82,7 @@ function clicked_menu(){
         $(".menuline-3").css("transform","translateY(20px)");
         
     }
-    else{
+    else{        
         clickmenu=true;
         $(".menu").css("transform","translateX(110%)");
         $(".menuline-1").css("transform","translateY(0px) rotate(0deg) ");
@@ -88,15 +90,38 @@ function clicked_menu(){
         $(".menuline-2").css("width","35px");
         $(".menuline-3").css("transform","translateY(0px)");
     }
+    if(a==1 ){
+        $(".menu").css("display","none");
+    }
+    
     
 }
-
-
-
 //booking_main
 function showcontainer(){
     $(".select_container").css("transform","translateX(0px)");
 }
 function hidecontainer(){
     $(".select_container").css("transform","translateX(-850px)");
+}
+
+
+
+
+
+// -------------------------LOGIN--------------------------
+
+function signin(){
+    $(".login").css("transform"," rotateY(180deg)");
+    $(".login").css("opacity","0");
+    $(".login").css("visibility","hidden")    
+    
+    $(".signin").css("transform","rotateY(0deg)");
+    $(".signin").css("visibility","visible")    
+    $(".signin").css("opacity","1");
+    
+}
+function login(){
+    // alert("!");
+    
+    
 }

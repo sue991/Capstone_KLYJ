@@ -12,7 +12,7 @@
     <body>
         <nav>
             <img id="fabi" src="img/fabicon.png">
-            <img class="a" id="logo" src="img/logo.png">            
+            <img class="a" id="logo" src="img/logo2.png">            
             <!-- <img id="menubutton" onclick="" src="img/menu.png"> -->            
             <div class="a" id="menubutton" onclick="clicked_menu()">
                 <div class="menuline menuline-1"></div>
@@ -21,7 +21,7 @@
             </div>
             <img class="a" id="search" onclick="clicked_search()" src="img/searchbutton.png">
             <div class="booking_button a">
-                <a href="bookingpage/booking_main.html">예약하기</a> 
+                <a href="bookingpage/booking_main.html" onclick="clicked_menu(1)">예약하기</a> 
             </div>
         </nav>
         <div class="popup">
@@ -40,13 +40,13 @@
             </table>
         </div> 
         <div class="menu">
-            <p>LOGIN</p>
+            <a href="./login.html" onclick="clicked_menu(1)"><p class="button_login a">LOGIN</p></a> 
         </div>
 
         <div class="background">
             <main>                
-                <img onclick="left_button()" class="point point_left" src="img/left.png" alt="">
-                <img onclick="right_button()" class="point point_right" src="img/right.png" alt="">
+                <img onclick="left_button()" class="point point_left a" src="img/left.png" alt="">
+                <img onclick="right_button()" class="point point_right a" src="img/right.png" alt="">
                 <img class="card c1" src="img/5.jpeg">
                 <img class="card c2" src="img/1.jpeg">
                 <img class="card c3" src="img/2.jpeg">

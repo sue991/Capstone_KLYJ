@@ -1,0 +1,115 @@
+html,body{
+    height: 100%;
+}
+body{
+}
+.login{
+    position: absolute;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    transition-duration: 0.8s;
+    opacity: 1;
+}
+.signin{
+    position: absolute;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+    opacity: 0;
+    transform: rotateY(180deg);
+    visibility: hidden;
+}
+
+.maincont{
+    /* border: 1px solid rgb(55,77,101,1); */
+    background-color: #E0ECF8;
+    display: flex;    
+    flex-direction: column;
+    /* justify-content : space-around; */
+    /* align-items : center; */
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+}
+.singmaincont{
+    
+}
+.cont{
+    display: flex;   
+    justify-content : center;
+    text-align: center;
+}
+.top{
+    transform: translate(0%,-50%);
+    position: absolute;    
+    width: 100%;
+    color : rgb(35,47,71,1);
+    font-weight: lighter;
+    font-size: 600%;
+ 
+}
+.top_back{       
+    position: relative;
+    width: 80%;
+    height: 50px;
+    background-color: rgb(187,155,47);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 8px solid  white;
+    border-bottom-left-radius: 5px;border-bottom-right-radius:5px;
+    /* color : rgb(35,47,71,1);
+    font-weight: lighter;
+    font-size: 600%; */
+}
+
+.inputbox{     
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+} 
+
+.input-group.input-group-lg{
+    width: 70%;
+    margin-top: 10px;
+}
+#inputGroup-sizing-lg{
+    width: 30px;
+    font-size: 12pt;
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
+}
+input{
+    text-align: center;
+}
+.footer{
+    /* margin-top: 10%; */
+    display: flex;
+    justify-content: center;
+}
+.footer2{
+    margin-top: 40px;
+}
+.btn.btn-primary{
+    margin-left: 7px;
+    background-color: #2E9AFE;
+}
+
+a{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 10pt;
+    color: #2E9AFE;
+    
+}
