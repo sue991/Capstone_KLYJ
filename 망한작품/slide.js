@@ -125,3 +125,11 @@ function login(){
     
     
 }
+
+function isempty(){
+    
+    if(document.getElementById("input-id").value == 0 || document.getElementById("input-pw").value == 0 )
+    {
+        document.getElementById("notice").innerHTML = "ID와 PW를 입력하세요.";
+    }
+}

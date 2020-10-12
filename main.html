@@ -1,72 +1,67 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>한양대학교 에리카캠퍼스 대관</title>
+<head>
+    <meta charset="utf-8">
+        <title>한양대학교 대관</title>
         <link rel="stylesheet" href="main.css">
         <link rel="shortcut icon" href="img/fabicon.png">
-        <script src="slide.js" type="text/javascript" ></script>
+        <script src="main.js" type="text/javascript" ></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
-    
-    <body>
-        <nav>
-            <img id="fabi" src="img/fabicon.png">
-            <img class="a" id="logo" src="img/logo2.png">            
-            <!-- <img id="menubutton" onclick="" src="img/menu.png"> -->            
-            <div class="a" id="menubutton" onclick="clicked_menu()">
-                <div class="menuline menuline-1"></div>
-                <div class="menuline menuline-2"></div>
-                <div class="menuline menuline-3"></div>
+</head>
+<div class="topblank"></div>
+<body>
+    <nav>
+        <div class="leftsection">
+            <div class="menubar a">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-            <img class="a" id="search" onclick="clicked_search()" src="img/searchbutton.png">
-            <div class="booking_button a">
-                <a href="bookingpage/booking_main.html" onclick="clicked_menu(1)">예약하기</a> 
-            </div>
-        </nav>
-        <div class="popup">
-            <table border="0">
-                <tr>
-                    주요시설
-                    <td>학생복지관</td>
-                    <td>학술정보관</td>
-                </tr>
-                <tr>
-                    운동시설
-                    <td>대운동장</td>
-                    <td>풋살장</td>
-                    <td>잔디구장</td>
-                </tr>
-            </table>
-        </div> 
-        <div class="menu">
-            <a href="./login.html" onclick="clicked_menu(1)"><p class="button_login a">LOGIN</p></a> 
-        </div>
-
-        <div class="background">
-            <main>                
-                <img onclick="left_button()" class="point point_left a" src="img/left.png" alt="">
-                <img onclick="right_button()" class="point point_right a" src="img/right.png" alt="">
-                <img class="card c1" src="img/5.jpeg">
-                <img class="card c2" src="img/1.jpeg">
-                <img class="card c3" src="img/2.jpeg">
-                <img class="card c4" src="img/3.jpeg">
-                <img class="card c5" src="img/4.jpeg">
-                <img class="card c6" src="img/5.jpeg">
-                <img class="card c7" src="img/6.jpeg">
-                <img class="card c8" src="img/7.jpeg">                                
-            </main>
-            <div class="bar_case">
-                <div class="bar"></div>
-            </div>
-        </div>
-        <div class="background_2">
+            
+            <div class="longline"></div>
+            <div><p id="leftp">한양대학교 대관</p></div>
+            <div class="longline"></div>
+            <img class="left-icon a" src="newimg/mypage.png">
+            <img class="left-icon a" src="newimg/search.png">
+            <img class="left-icon a" src="newimg/star.png">            
+            <img src="img/fabicon.png" class="left-icon "> 
             
         </div>
+    </nav>
+    <main>
+
+        <div class="maincont">            
+            <div class="card-section">
+                <img src="img/hills.jpg" class="card" id="card12">
+                    <div class="card-button">
+                        <div class="leftbutton a" onclick="slideimg()"">
+                            <img src="newimg/but_left.png" class="card-button-img" >
+                        </div>
+                        <div class="rightbutton a">
+                            <img src="newimg/but_right.png" class="card-button-img">
+                        </div>
+                    </div>
+                <div class="card-text">
+                    <p class="card-text-p">GREEN</p>
+                    <p class="card-text-p">HILLS</p>
+                </div>
+            </div>
+            
+            <div class="middle">
+                <img src="newimg/hills2.jpg">
+            </div>
+
+            <div class="blank"></div>
+            <footer>
+                <div class="bottom-box a">
+                    <img src="newimg/but_left.png" class="card-button-img bottom-img">
+                </div>
+                <div class="bottom-box2 a"></div>
+            </footer>
+            <!-- <img src="newimg/hills2.jpg" class="card2"> -->
+        </div>
+        <div class="nav-right">
+            <p class="nav-right-p">TODAY's </p>
+        </div>
         
-        
-
-
-
-    </body>
-</html>
+    </main>
+</body>

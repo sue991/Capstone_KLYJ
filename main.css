@@ -1,248 +1,178 @@
-a{
-    text-decoration: none;
-    color:  wheat;
-}
-#logo{
-    margin-top: 6px;
-    width: 110px;
-    float: left;
-    margin-left: 10px;
-}
-#fabi{
-    margin-top: 7px;
-    margin-left: 0.5%;
-    float: left;
-    width: 35px;
-}
-#menubutton{
-    padding-top: 4px;
-    width: 50px;
-    height: 100%;
-    float: right;
-    transition-duration: 0.3s;
-    /* background-color: black; */
-}
-.booking_button{
-    width: 60px;
-    height: 70%;
-    float: right;
-    border: 1px solid black;
-    text-align: center;
-    margin-top: 5px;
-    margin-right: 10px;
-}
-.menuline{
-    margin-top: 7px;
-    position: relative;
-    height: 5px;
-    background-color: black;
-    transition-duration: 0.4s;
-}
-.menuline-1{
-    width: 40px;
-}
-.menuline-2{
-    width: 35px;
-}
-.menuline-3{
-    width: 30px;
-}
-#search{
-    margin-top:8px;
-    margin-right: 10px;
-    float: right;
-    width: 35px;
-}
 html,body{
-    height: 100%;
-}
-body{
-    padding: 0;
+    width: 100%;
+    height:100%;
+    padding:0;
     margin: 0;
-    overflow-x: hidden;
 }
-.popup{
-    padding-top: 10px;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    background-color: black;
-    /* display: hidden; */
-    z-index: 1;
-    opacity: 0;
-    color: white;
-    text-align: center;
-    transition-duration: 0.5s;
-    font-size: 15pt;
-    font-family: NanumGothicBold;
+p{
+    margin: 0;
 }
-.menu{
-    position: absolute;
-    background: rgba(0,0, 0, 0.8);
-    color:  wheat;
-    text-align: center;
-    right: 0;
-    width: 30%;;
-    height: 100%;
-    z-index: 2;
-    overflow: hidden;
-    transform : translateX(110%);
-    transition-duration: 0.4s;
-    /* box-shadow: 0px 2px 5px 2px black; */
-}
-.button_login{
-    margin-top: 0;
-    display: flex;
-    /* border: 1px solid white; */
-    transition-duration: 0.1s;
-    background: rgba(255,255, 255, 0.2);
-    height: 5.3%;
-    justify-content : center;
-    align-items : center;
-}
-.button_login:hover{
-    transition-duration: 0.5s;
-    background: rgba(255,255, 255, 0.4);
-}
-
-nav{
-    position: relative;
-    height: 5%;
-    z-index: 3;
-    overflow: hidden;
-    /* background-color:; */
-    /* border-bottom:1px solid gray; */
-    box-shadow: 2px 2px 2px 2px gray;
-    /* border-radius: 5px; */
-}
-.background{
-    display: flex;
-    height: 60%;
-    position: relative;
-    /* background-color:rgb(55, 71, 101) ; */
-    background-color: white;
-}
-main{
-    margin-top: 50px;
-    background-color: white;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    display: flex;
-}
-
-/* 이거 bar 고쳐야함 상대위치로 대충 박아놓음 */
-.bar_case{
-    position: absolute;
-    width: 150px;
-    height: 6px;
-    left: 45%;
-    top: 98%;
-    border: 1px solid #D8D8D8;
-    background-color: #D8D8D8;
-    border-radius: 15px;
-}
-.bar{
-    width: 30px;
-    height: 6px;
-    background-color: #585858;
-    border-radius: 15px;
-    transition-duration: 0.5s;
-}
-.point{
-    border: 4px solid gray;
-    background-color: white;
-    padding: 5px;
-    border-radius: 40px;
-    width: 20px;    
-    opacity: 0.6;
-    position: absolute;
-    z-index: 1;
-}
-.a:hover{
+.a{
     cursor: pointer;
 }
-.point_right{
-    margin-top: 230px;
-    right: 3%;
-}
-.point_left{
-    margin-top: 230px;
-    left: 3%;
-}
-.card{
-    /* margin-top: 13px; */
-    /* margin-left: 0.5%; */
-    text-align: center;
-    float:left;
-    width: 800px;
-    height: 100%;
-    /* border-radius: 5px;    */
-    transition-duration: 0.5s;
-    z-index: 0;
-    transform:translateX(-570px);
-    
-}
-/* .card:hover{
-    box-shadow: 0px 5px 10px 5px gray;
-    transition-duration: 0.2s;
-    opacity: 0.8;
-} */
-/* .c1{
-    transition: 1s;
-    transform: translate(-300px);
-    
-} */
-
-.background_2{
+.topblank{
     width: 100%;
-    height: 400px;
-    background-color:rgb(55, 71, 101) ;
+    height: 40px;
 }
-
-/*---------------- booking_main.css----------------*/
-.blank{
-    margin-top: 20px;
-    height: 100%;
-    width: 40px;    
+nav{
     float: left;
-    /* z-index: ; */
-    background-color: white;
+    width: 10%;
+    height: 100%;
+    /* background-color: blue; */
+    /* border-right: 1px solid black; */
+    display: flex;
+    justify-content: center;
 }
-.container{
-    margin-top: 20px;    
-    width: 150px;
-    height: 300px;
-    color: white;
-    background-color: #8181F7;
+.leftsection{
+    flex-direction: column;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    border-radius: 5px;
-    /* overflow: hidden; */
+}
+main{
+    float: left;
+    width: 90%;
+    height: 100%;
+}
+.menubar{
+    margin-bottom: 40px;
+}
+.line{
+    margin-top: 4px;
+    width: 25px;
+    border: 2px solid #424242;
+    height: 0.01px;
+    border-radius: 999px;
+}
+.longline{
+    width: 0.01px;
+    height: 25%;
+    border: 1px solid #BDBDBD;
+}
+#leftp{
+    font-weight: bold;
+    writing-mode: vertical-rl;;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 10pt;
+}
+.left-icon{
+    width: 30px;
+    margin-top: 30px;
+    opacity: 0.6;
 }
 
-.select_container{
-    /* z-index: -1; */
-    width: 1000px;
-    height: 300px;
-    /* position: absolute; */
-    background-color: aqua;
-    opacity: 0.4;
-    /* transform: translateX(-850px); */
-    border-radius: 5px;
-    float: left;
-    /* transition-duration: 0.5s; */
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-.imgcont{
-    display: inline-block;
-    width: 200px;
-    height: 100%;
-    background-color: wheat;
+
+.maincont{
     /* float: left; */
-    margin-right: 10px;
+    /* display: inline-block; */
+    /* display: flex; */
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+.card-section{
+    overflow: hidden;
+    width: 1200px;
+    height: 640px;
+    position: relative;
+    display: flex;
+}
+
+.card-button{
+    position: absolute;
+    display: flex;    
+    right: 0;
+    bottom: 0;
+    background-color: #D8F781;
+}
+.leftbutton, .rightbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 80px;
+    transition-duration: 0.4s;
+}
+.leftbutton:hover, .rightbutton:hover{
+    transition-duration: 0.4s;
+    background-color: #F7BE81;
+}
+.card-button-img{
+    width: 30%;
+}
+.card-text{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    font-size: 80pt;
+    z-index: 1;
+}
+.card-text-p{
+    margin-top: -50px;
+    font-weight: bold;
+    /* text-align: center; */
+}
+.card{    
+    transition-duration: 1s;
+    position: absolute;
+    width: 100%;
+    height: 640px;
+    opacity: 0.5;
+    /* transform: rotate(-20deg) translate(-30%,-20%); */
     
+}
+.card2{
+    max-width: 20%;
+    overflow: hidden;
+}
+
+.nav-right{
+    float: left;
+    width: 10%;
+    height: 640px;
+    border-top: 1px solid gray;
+    position: relative;
+}
+.nav-right-p{
+    /* position: absolute; */
+    /* bottom: 0; */
+    font-weight: lighter;
+    font-size: 50px;
+}
+
+.middle{
+    overflow: hidden;
+    margin-top: 40px;
+    width: 1200px;
+    height: 100px;    
+}
+
+
+
+
+footer{
+    bottom: 0;
+    left: 400px;
+    position: absolute;
+    display: flex;
+}
+.bottom-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    background-color: #D8D8D8;
+}
+.bottom-box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    width: 350px;
+    height: 90px;
+    background-color: #D8F781;
+}
+.bottom-img{
+    transform: rotate(90deg);
 }

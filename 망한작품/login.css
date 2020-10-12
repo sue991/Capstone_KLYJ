@@ -23,7 +23,7 @@ body{
     height: 100%;
     transition-duration: 1s;
     opacity: 0;
-    transform: rotateY(180deg);
+    transform: rotateY(90deg);
     visibility: hidden;
 }
 
@@ -100,6 +100,11 @@ input{
 .footer2{
     margin-top: 40px;
 }
+#notice{
+    font-weight: lighter;
+    font-size: 9pt;
+}
+
 .btn.btn-primary{
     margin-left: 7px;
     background-color: #2E9AFE;

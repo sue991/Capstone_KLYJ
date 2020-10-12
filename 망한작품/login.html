@@ -11,7 +11,7 @@
 
     </head>
     <body>
-        <button onclick="login()"> dfsdaf</button>
+        
         <div class="login">
             <div class="maincont">        
                 <div class="cont">                
@@ -28,18 +28,19 @@
                         <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-lg">I D</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        <input type="text" class="form-control" id="input-id" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                     </div>
                     <div class="input-group input-group-lg">
                         <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-lg">PW</span>
                         </div>
-                        <input type="password" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        <input type="password" class="form-control" id="input-pw" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                     </div>
+                    <p id="notice"></p>
                 </div>
-
+                
                 <div class="footer">
-                    <button type="button" class="btn btn-primary">LOGIN</button>
+                    <button type="button" class="btn btn-primary" onclick="isempty()">LOGIN</button>
                     <button type="button" class="btn btn-primary" onclick="signin()">SIGN UP</button>                
                 </div>
                 <a href="" class="forgot">forgot ID/PW?</a>
