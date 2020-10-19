@@ -10,6 +10,14 @@ p{
 .a{
     cursor: pointer;
 }
+.hoverscale{
+    transition-duration: 0.2s;
+    transform: scale(1);
+}
+.hoverscale:hover{
+    transition-duration: 0.2s;
+    transform: scale(1.2);
+}
 .topblank{
     width: 100%;
     height: 40px;
@@ -22,6 +30,8 @@ nav{
     /* border-right: 1px solid black; */
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 .leftsection{
     flex-direction: column;
@@ -35,6 +45,29 @@ main{
 }
 .menubar{
     margin-bottom: 40px;
+}
+.menu{
+    position: absolute;
+    width: 100%;
+    height: 745px;
+    background-color: #BDBDBD;
+    /* opacity: 0.7; */
+    transform: translateY(-100%);
+    transition-duration: 0.7s;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+
+}
+
+.menu-icon-img{
+    width: 40px;   
+    margin-top: 10px;
+}
+.menu-icon-img:hover{
+    opacity: 0.4;
+    
 }
 .line{
     margin-top: 4px;
