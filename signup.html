@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <title>SignUp</title>
+        <link rel="stylesheet" href="signup.css">
+        <link rel="shortcut icon" href="img/fabicon.png">
+        <script src="main.js" type="text/javascript" ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="maincont">
+        <div class="topper">
+            <p class="title">Sign Up</p>
+            <div class="inputbox">                
+                <div class="inputbox-stair">
+                    <div class="verify v1"></div>
+                    <input id="input_1" onfocusout="verify_input('input_1')" type="text" placeholder="STUDENT-ID">
+                </div>                            
+                <div class="inputbox-stair">
+                    <div class="verify v2"></div>
+                    <input id="input_2" onfocusout="verify_input('input_2')" type="password" placeholder="PASSWORD" style="ime-mode:disabled;">
+                </div>
+                <div class="inputbox-stair">
+                    <div class="verify v3"></div>
+                    <input id="input_3" onfocusout="verify_input('input_3')" type="password" placeholder="RE-PASSWORD" style="ime-mode:disabled;">
+                </div>
+                <form>
+                    
+                    <select name="소속">
+                        <option value="none" style="text-align: right;">  소속  </option>
+                        
+                        <optgroup label="공학대학">
+                            <option value="e1"> 기계공학과 </option>
+                            <option value="e2"> 로봇공학과 </option>
+                            <option value="e3"> 산업경영공학과 </option>
+                            <option value="e4"> 전자공학부 </option>
+                            <option value="e5"> 재료화학공학과 </option>
+                            <option value="e6"> 생명나노공학과 </option>
+                            <option value="e7"> 건축학부 </option>
+                            <option value="e8"> 건설환경플랜트공학과 </option>
+                            <option value="e9"> 교통물류공학과 </option>
+                            <option value="e10"> 국방정보공학과 </option>
+                            <option value="e11"> 융합공학과 </option>
+                            <option value="e12"> 스마트융합공학부 </option>                            
+                        </optgroup>                    
+                        <optgroup label="과학기술융합대학">
+                            <option value="s1"> 응용수학과 </option>
+                            <option value="s2"> 응용물리학과 </option>
+                            <option value="s3"> 화학분자공학과 </option>
+                            <option value="s3"> 분자생명과학과 </option>
+                            <option value="s3"> 해양융합공학과 </option>
+                            <option value="s3"> 나노광전자학과 </option>                            
+                        </optgroup>
+                            
+                        <optgroup label="경상대학">
+                            <option value="b1"> 경제학부 </option>
+                            <option value="b2"> 경영학부 </option>
+                            <option value="b3"> 보험계리학과 </option>
+                            <option value="b4"> 회계세무학과 </option>
+                        </optgroup>
+                        <optgroup label="국제문화대학">
+                            <option value="l1"> 한국언어문학과 </option>
+                            <option value="l2"> 문화인류학과 </option>
+                            <option value="l3"> 문화콘텐츠학과 </option>
+                            <option value="l4"> 중국학과 </option>
+                            <option value="l5"> 일본학과 </option>
+                            <option value="l7"> 영미언어문화학과 </option>
+                            <option value="l6"> 프랑스학과 </option>
+                        </optgroup>
+                        <optgroup label="언론정보대학">
+                            <option value="i1"> 정보사회미디어학과 </option>
+                            <option value="i2"> 광고홍보학과 </option>
+                            <option value="i3"> 신문방송학과 </option>
+                            <option value="i4"> 정보사회학과 </option>
+                        </optgroup>
+                        <optgroup label="디자인대학">
+                            <option value="d1"> 주얼리패션디자인학과 </option>
+                            <option value="d2"> 서피스인테리어디자인학과 </option>
+                            <option value="d3"> 산업디자인학과 </option>
+                            <option value="d4"> 커뮤니케이션디자인학과 </option>
+                            <option value="d5"> 영상디자인학과 </option>
+                        </optgroup>
+                        <optgroup label="예체능대학">
+                            <option value="m1"> 스포트과학부 </option>
+                            <option value="m2"> 무용예술학과 </option>
+                            <option value="m3"> 실용음악학과 </option>
+                        </optgroup>
+                        
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="a button_submit">SIGN UP</button>
+            <a class="signup" href="login.html">LogIn here</a>
+        </div>
+        
+    </div>
+</body>

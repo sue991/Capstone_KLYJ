@@ -37,6 +37,7 @@ nav{
     flex-direction: column;
     display: flex;
     align-items: center;
+    /* height: 1200px; */
 }
 main{
     float: left;
@@ -109,6 +110,7 @@ main{
     height: 640px;
     position: relative;
     display: flex;
+    box-shadow: 2px 5px 2px rgba(0, 0, 0,0.2);
 }
 
 .card-button{
@@ -196,6 +198,7 @@ footer{
     width: 90px;
     height: 90px;
     background-color: #D8D8D8;
+    
 }
 .bottom-box2{
     display: flex;
