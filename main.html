@@ -10,23 +10,37 @@
 <div class="topblank"></div>
 <body>
     <nav>
-        <div class="menu">
+        <!-- <div class="menu">
               <img class="menu-icon-img a" src="newimg/close.png" onclick="clicked_menu()">
-        </div>
+        </div> -->
         <div class="leftsection">
-            <div class="menubar a" onclick="clicked_menu(1)">
+            <!-- <div class="menubar a" onclick="clicked_menu(1)">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
+            </div> -->
+            
+            <!-- <div class="longline"></div> -->
+            <!-- <div><p id="leftp">한양대학교 대관</p></div> -->
+            <!-- <div class="longline"></div> -->
+            <img src="img/fabicon.png" class="left-icon "> 
+            
+            <div class="menu">
+                <div class="menu_1 left_menu_button a">대관소개
+                    <div class="menubar"></div>
+                </div>
+                
+                <div class="menu_2 left_menu_button a">주요공간
+                    <div class="menubar"></div>
+                </div>
+                
+                <div class="menu_3 left_menu_button a">건물별안내
+                    <div class="menubar"></div>
+                </div>
+                
+                <div class="menu_4 left_menu_button a">FAQ</div>
             </div>
             
-            <div class="longline"></div>
-            <div><p id="leftp">한양대학교 대관</p></div>
-            <div class="longline"></div>
-            <a href="login.html"><img class="left-icon a hoverscale" src="newimg/mypage.png"></a>
-            <img class="left-icon a hoverscale" src="newimg/search.png">
-            <img class="left-icon a hoverscale" src="newimg/star.png">            
-            <img src="img/fabicon.png" class="left-icon "> 
             
         </div>
     </nav>
@@ -34,37 +48,59 @@
 
         <div class="maincont">            
             <div class="card-section">
-                <img src="img/hills.jpg" class="card" id="card12">
+                <div class="slide">
+                    <img src="newimg/room5.png" class="card" id="card1">
+                    <!-- <img src="newimg/room5.png" class="card" id="card2">
+                    <img src="newimg/room6.png" class="card" id="card3">
+                    <img src="newimg/room7.png" class="card" id="card4"> -->
+                </div>
+                
                     <div class="card-button">
-                        <div class="leftbutton a" onclick="slideimg()"">
+                        <div class="leftbutton a" onclick="slide_left()">
                             <img src="newimg/but_left.png" class="card-button-img" >
                         </div>
-                        <div class="rightbutton a">
+                        <div class="rightbutton a" onclick="slide_right()">
                             <img src="newimg/but_right.png" class="card-button-img">
                         </div>
                     </div>
                 <div class="card-text">
-                    <p class="card-text-p">GREEN</p>
-                    <p class="card-text-p">HILLS</p>
+                    <p id="card-text-p-description">703</p>
+                    <p id="card-text-p-name">대회의실</p>                    
+                    
+                </div>            
+                
+                
+                
+            </div>                        
+            <!-- <div class="middle">
+                <div class="card-section-next">
+                    <img src="newimg/room2.png" class="card-section-next">
                 </div>
-            </div>
-            
-            <div class="middle">
-                <img src="newimg/hills2.jpg">
-            </div>
-
-            <div class="blank"></div>
-            <footer>
-                <div class="bottom-box a">
-                    <img src="newimg/but_left.png" class="card-button-img bottom-img">
-                </div>
-                <div class="bottom-box2 a"></div>
-            </footer>
-            <!-- <img src="newimg/hills2.jpg" class="card2"> -->
+                
+            </div>     -->
         </div>
-        <!-- <div class="nav-right">
-            <p class="nav-right-p">TODAY's </p>
-        </div> -->
+        
+        <div class="nav-right">
+            <div class="nav-right-top">
+                <a href="login.html" style="height: 30px;"><img class="right-icon a hoverscale" src="newimg/mypage.png"></a>
+                <img class="right-icon a hoverscale" src="newimg/search.png">
+                <img class="right-icon a hoverscale" src="newimg/star.png">            
+            </div>
+            <div class="nav-right-cont">
+                <p>RECOMMENDATION</p>
+                <img src="newimg/room2.png" class="nav-right-cont-img">
+                <img src="newimg/room3.png" class="nav-right-cont-img">
+                <img src="newimg/room4.png" class="nav-right-cont-img">
+            </div>
+        </div>
         
     </main>
+    <footer>
+        <div class="bottom-section">
+            <div class="bottom-section-p">
+                <p id="locale"> 한양대학교 에리카캠퍼스 1, Hanyangdaehak-ro, Sangnok-gu, Ansan-si, Gyeonggi-do </p>
+                <p id="copyright">Hanyang University @ 2020 Capstone team KLYJ</p>
+            </div>
+        </div>
+    </footer>
 </body>
