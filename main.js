@@ -1,3 +1,4 @@
+
 var slidenum = 5;
 var imgsrc;
 var roomname = [{name:"대강의실", num:703},{name:"대강당", num:201},{name:"소강의실", num:705},{name:"화상회의실", num:309}];
@@ -44,6 +45,11 @@ function verify_input(a){
         if(option!=""){            
             $(num).css("backgroundColor","#0B2161")
         }
-    }
-    
+    }    
+}
+function login(){
+    alert(document.getElementById("input_1").value);
+    // if(document.getElementById("input_1").value ==""){
+    //     alert("Please insert blank");
+    // }
 }

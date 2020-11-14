@@ -7,6 +7,17 @@
         <script src="main.js" type="text/javascript" ></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+<script>
+    var button_num = 0;
+    $(function(){
+        $("#input_1 , #input_2, #input_3, #selectoption").on("propertychange change keydown paste input", function(){            
+            if($(this).attr("id")=="input_1") $(".v1").css("backgroundColor","#0B2161")
+            else if($(this).attr("id")=="input_2") $(".v2").css("backgroundColor","#0B2161")         
+            else if($(this).attr("id")=="input_3") $(".v3").css("backgroundColor","#0B2161")            
+            else if($(this).attr("id")=="selectoption") $(".v4").css("backgroundColor","#0B2161")            
+        });
+    });
+</script>
 <body>
     <div class="maincont">
         <div class="topper">

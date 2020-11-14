@@ -10,6 +10,12 @@ p{
 .a{
     cursor: pointer;
 }
+a{
+    text-decoration: none;
+}
+a:visited , a:link{
+    text-decoration: none;
+}
 .hoverscale{
     transition-duration: 0.2s;
     transform: scale(1);
@@ -96,9 +102,10 @@ main{
     float: left;
 }
 .card-section{
+    margin-top: 60px;
     overflow: hidden;
     width: 1200px;
-    height: 600px;
+    height: 630px;
     position: relative;
     /* display: flex; */
     /* display: inline-block; */
@@ -182,7 +189,7 @@ main{
     margin-top: 10px;
     margin-bottom: 10px;
     opacity: 1;
-    filter: invert(100%);
+    /* filter: invert(100%); */
 }
 .left-icon{
     filter:none;
@@ -192,7 +199,7 @@ main{
     justify-content: space-around;
     width: 100%;
     /* border: 1px solid gray; */
-    background-color:  #0B2161;
+    /* background-color:  #0B2161; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     
