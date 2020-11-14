@@ -1,24 +1,34 @@
 
 var slidenum = 5;
 var imgsrc;
-var roomname = [{name:"대강의실", num:703},{name:"대강당", num:201},{name:"소강의실", num:705},{name:"화상회의실", num:309}];
-function slide_right(){                
+var roomname = [{name:"첨단강의실", num:"3공학관 304"},{name:"IC-PBL실", num:"4공학관 416"},{name:"MAROON", num:"클러스터 506"},{name:"PURPLE", num:"클러스터 509"}];
+// setInterval(() => {
+//     slide_right();
+// }, 3000);
+function slide_left(){          
+    
     if(--slidenum<5){slidenum=8;}
-    imgsrc = "newimg/room" + slidenum + ".png";
-    document.getElementById("card1").src = imgsrc;
-    document.getElementById("card-text-p-description").innerHTML = roomname[slidenum-5].num;    
-    document.getElementById("card-text-p-name").innerHTML = roomname[slidenum-5].name;    
-    // $(c+ slidenum).css("transform","translateX(-1200px)");    
-    // $(c+ (slidenum+1) ).css("opacity","1");    
-    // if(slidenum++==5){slidenum=1;}
-    // alert(slidenum);
+    $("#card1").css("opacity","0.1");          
+    setTimeout(() => {
+        $("#card1").css("opacity","1");    
+        imgsrc = "newimg/room" + slidenum + ".png";        
+        document.getElementById("card1").src = imgsrc;
+        document.getElementById("card-text-p-description").innerHTML = roomname[slidenum-5].num;    
+        document.getElementById("card-text-p-name").innerHTML = roomname[slidenum-5].name;       
+    }, 300);
+    
+    
 }
-function slide_left(){            
+function slide_right(){            
     if(++slidenum>8){slidenum=5;}
-    imgsrc = "newimg/room" + slidenum + ".png";
-    document.getElementById("card1").src = imgsrc;
-    document.getElementById("card-text-p-description").innerHTML = roomname[slidenum-5].num;    
-    document.getElementById("card-text-p-name").innerHTML = roomname[slidenum-5].name;    
+    $("#card1").css("opacity","0.1");          
+    setTimeout(() => {
+        $("#card1").css("opacity","1");    
+        imgsrc = "newimg/room" + slidenum + ".png";        
+        document.getElementById("card1").src = imgsrc;
+        document.getElementById("card-text-p-description").innerHTML = roomname[slidenum-5].num;    
+        document.getElementById("card-text-p-name").innerHTML = roomname[slidenum-5].name;       
+    }, 300);
     // $(c+ slidenum).css("transform","translateX(0px)");    
     // $(c+ (slidenum+1) ).css("opacity","0");        
     // if(slidenum--==0){slidenum=4;}
