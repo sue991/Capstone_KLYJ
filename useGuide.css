@@ -1,0 +1,211 @@
+html,body{
+    width: 100%;
+    height: 1200px;         
+}
+.a{
+    cursor: pointer;
+}
+nav{
+    margin-top: 50px;
+    float: left;
+    width: 10%;
+    height: 100%;
+    /* background-color: blue; */
+    /* border-right: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.leftsection{
+    width: 100%;    
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    /* height: 1200px; */
+    /* background-color: #A9D0F5;     */
+    
+}
+.left-icon , .right-icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+    /* filter: invert(100%); */
+}
+.left-icon{
+    filter:none;
+}
+.menubar{
+    width: 20px;
+    border: 1px solid gray;    
+    margin-top: 15px;
+}
+.menu{
+    width: 100%;
+    height: 200px; 
+    margin-top: 40px;       
+}.left_menu_button{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #424242;
+}
+main{
+    width: 80%;
+    height: 100%;        
+    float: left;    
+}
+.header{
+    font-size: 30pt;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.header-bar{
+    width: 40px;
+    height: 5px;
+    border-bottom: 1px solid black;
+}
+/* .menubar_1{
+    margin-top: 5px;
+    width: 100%;
+} */
+.topmenu{
+    margin-top: 30px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+.topmenu > li{
+    list-style: none;    
+    color: rgb(68, 100, 117);
+    background-color: #E6E6E6;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 5px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: KoreanAGDL;
+}
+#li1{
+    color: white;
+    background-color: rgb(68, 86, 117);
+}
+.topmenu-li{ 
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: NanumGothic;    
+    list-style: none;
+}
+.topmenu-li1{ 
+    /* display: none; */
+}
+.topmenu-li1 > img{
+    margin-top: 10px;
+    width: 2%;
+    transform: rotate(90deg);
+}
+.topmenu-li1-guide{
+    width: 500px;
+    height: 80px;
+    margin-top: 10px;
+}
+.topmenu-li1-guide-left{
+    width: 15%;
+    height: 100%;
+    float: left;
+    background-color: rgba(68, 86, 117,0.9);
+    border-top-left-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    font-size: 40pt;
+}
+.topmenu-li1-guide-left > img{
+    width: 40%;
+    filter: invert(100%);
+}
+.topmenu-li1-guide-right{
+    float: left;
+    height: 100%;
+    width: 85%;    
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    border-top: 4px solid rgba(68, 86, 117,0.9);
+    border-bottom: 4px solid rgba(68, 86, 117,0.9);
+    border-right: 4px solid rgba(68, 86, 117,0.9);
+    border-bottom-right-radius: 20px;
+    color: #0B173B;
+    font-size: 20pt;
+}
+.topmenu-li1-guide-right-p1{
+    font-size: 40pt;
+    margin-left: 20px;
+}
+.table_css > thead > tr > th{
+    background-color: rgba(68, 86, 117,0.9);
+    color: white;
+    text-align: center;
+}
+td{
+    width: 350px;
+    height: 30px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.topmenu-li2 , .topmenu-li3, .topmenu-li4{
+    display: none;
+}
+.topmenu-li3{
+    
+}
+.topmenu-li3 > img{    
+    width: 75%;
+    transition: 0.5s;
+    z-index: 0;
+}
+/* .topmenu-li3 > img:hover{
+    transition: 0.5s;
+    transform: scale(1.4);
+} */
+footer{
+    bottom: 0;
+    width: 100%;    
+    height: 100px;
+    position: fixed;
+    bottom : 0;
+    background-color: #0A122A;
+    z-index: 1;
+}
+.bottom-section-p{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+#locale,#copyright{
+    font-size: 8pt;
+    color: #E6E6E6;
+    font-family: KoreanAGDL;
+}
+
+    

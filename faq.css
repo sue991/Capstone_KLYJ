@@ -75,23 +75,10 @@ main{
 .article{
     position: relative;
 }
-#t2,#t3,#t4,#t5{
-    /* display: none; */
+.table_css >tbody > tr{
+    height: 50px;
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 footer{

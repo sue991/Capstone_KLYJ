@@ -63,3 +63,19 @@ function login(){
     //     alert("Please insert blank");
     // }
 }
+
+
+function topmenu_click(num){    
+    for (let index = 1; index < 5; index++) {
+        var li = "#li" + index +"";
+        var dli = ".topmenu-li" + index;
+        $(dli).css("display","none");        
+        $(li).css("color","rgb(68, 100, 117)");
+        $(li).css("backgroundColor","#E6E6E6");
+    }
+    var li = "#li" + num;
+    var dli = ".topmenu-li" + num;
+    $(dli).css("display","flex");        
+    $(li).css("backgroundColor","rgb(68, 86, 117)");
+    $(li).css("color","#E6E6E6");     
+}
