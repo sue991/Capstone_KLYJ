@@ -79,3 +79,17 @@ function topmenu_click(num){
     $(li).css("backgroundColor","rgb(68, 86, 117)");
     $(li).css("color","#E6E6E6");     
 }
+function changeimg_campusmap(){   
+    const s = document.getElementById('silsa');
+    if(s.value == 1){
+        document.getElementById('campusmap').src = "newimg/campusmap_silsa.png";
+        document.getElementById('silsa').innerText = "안내도보기";
+        s. value = 2;
+    }
+    else{
+        document.getElementById('campusmap').src = "newimg/campusmap.png";
+        document.getElementById('silsa').innerText = "실사이미지보기";
+        s. value = 1;
+    }    
+    
+}
