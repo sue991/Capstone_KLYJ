@@ -1,0 +1,152 @@
+html,body{
+    width: 100%;
+    height: 1300px;         
+}
+.a{
+    cursor: pointer;
+}
+a:visited , a:link, a:active, a:hover{
+  text-decoration: none;  
+}
+nav{
+    margin-top: 50px;
+    float: left;
+    width: 10%;
+    height: 100%;
+    /* background-color: blue; */
+    /* border-right: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+main{
+    width: 80%;
+    height: 100%;        
+    float: left;    
+}
+footer{
+    bottom: 0;
+    width: 100%;    
+    height: 100px;
+    position: fixed;
+    bottom : 0;
+    background-color: #0A122A;
+    z-index: 1;
+    opacity: 0.9;
+}
+.bottom-section-p{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+#locale,#copyright{
+    font-size: 8pt;
+    color: #E6E6E6;
+    font-family: KoreanAGDL;
+}
+.leftsection{
+    width: 100%;    
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    /* height: 1200px; */
+    /* background-color: #A9D0F5;     */
+    
+}
+.left-icon , .right-icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+    /* filter: invert(100%); */
+}
+.left-icon{
+    filter:none;
+}
+.menubar{
+    width: 20px;
+    border: 1px solid gray;    
+    margin-top: 15px;
+}
+.menu{
+    width: 100%;
+    height: 200px; 
+    margin-top: 40px;       
+}.left_menu_button{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #424242;
+}
+.header{
+    font-size: 30pt;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.header-bar{
+    width: 80px;
+    height: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.cont{
+    margin-left: 40px; /*임시방편*/
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin-top: 80px;
+}
+.card{
+    float: left;
+    margin-left: 40px;
+    padding-bottom: 40px;
+}
+.card-img{
+    position: relative;
+}
+.card-img > img{
+    width: 400px;
+}
+.card-detail{
+    position: absolute;    
+    right: 0;
+    bottom: 0;  
+    /* width: 30px;   */
+    border-top: 60px solid transparent;
+    border-right: 60px solid white;
+    opacity: 0.9;        
+}
+.card-detail> img{
+    width: 20px;
+    position: absolute;
+    bottom: 5px;
+    right: -55px;
+    filter: invert(30%);
+}
+.card-description > p {
+    margin: 0;
+}
+.card-description > .number{
+    color: rgba(68, 86, 117,0.9);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.card-description > .title{
+    font-size: 20pt;
+    /* font-weight: bold; */    
+}
+.card-description > .facility{
+    margin-top: -5px;
+    font-weight: lighter;
+}
