@@ -10,12 +10,11 @@ p{
 .a{
     cursor: pointer;
 }
+
 a{
     text-decoration: none;
 }
-a:visited , a:link{
-    text-decoration: none;
-}
+
 .hoverscale{
     transition-duration: 0.2s;
     transform: scale(1);
