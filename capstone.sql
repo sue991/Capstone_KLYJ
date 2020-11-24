@@ -33,8 +33,9 @@ DROP TABLE IF EXISTS `building`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `building` (
-  `name` int NOT NULL,
-  PRIMARY KEY (`name`)
+  `id` int NOT NULL,
+  `name` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,8 +56,9 @@ DROP TABLE IF EXISTS `college`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `college` (
-  `name` int NOT NULL,
-  PRIMARY KEY (`name`)
+  `id` int NOT NULL,
+  `name` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -77,11 +79,12 @@ DROP TABLE IF EXISTS `department`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `department` (
-  `name` varchar(45) NOT NULL,
+  `id` int NOT NULL,
   `college_name` int NOT NULL,
-  PRIMARY KEY (`name`),
+  `department_name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `college_name` (`college_name`),
-  CONSTRAINT `department_ibfk_1` FOREIGN KEY (`college_name`) REFERENCES `college` (`name`)
+  CONSTRAINT `department_ibfk_1` FOREIGN KEY (`college_name`) REFERENCES `college` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -92,6 +95,29 @@ CREATE TABLE `department` (
 LOCK TABLES `department` WRITE;
 /*!40000 ALTER TABLE `department` DISABLE KEYS */;
 /*!40000 ALTER TABLE `department` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `purpose`
+--
+
+DROP TABLE IF EXISTS `purpose`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `purpose` (
+  `id` int NOT NULL,
+  `use_purpose` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `purpose`
+--
+
+LOCK TABLES `purpose` WRITE;
+/*!40000 ALTER TABLE `purpose` DISABLE KEYS */;
+/*!40000 ALTER TABLE `purpose` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -110,12 +136,14 @@ CREATE TABLE `reservation` (
   `headcount` int NOT NULL,
   `required_equipment` text,
   `group_name` varchar(80) NOT NULL,
-  `purpose` text NOT NULL,
+  `purpose` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `room_id` (`room_id`),
+  KEY `purpose` (`purpose`),
   CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
-  CONSTRAINT `reservation_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`)
+  CONSTRAINT `reservation_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`),
+  CONSTRAINT `reservation_ibfk_3` FOREIGN KEY (`purpose`) REFERENCES `purpose` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -146,8 +174,8 @@ CREATE TABLE `room` (
   PRIMARY KEY (`id`),
   KEY `building` (`building`),
   KEY `college` (`college`),
-  CONSTRAINT `room_ibfk_1` FOREIGN KEY (`building`) REFERENCES `building` (`name`),
-  CONSTRAINT `room_ibfk_2` FOREIGN KEY (`college`) REFERENCES `college` (`name`)
+  CONSTRAINT `room_ibfk_1` FOREIGN KEY (`building`) REFERENCES `building` (`id`),
+  CONSTRAINT `room_ibfk_2` FOREIGN KEY (`college`) REFERENCES `college` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -521,7 +549,7 @@ UNLOCK TABLES;
 --
 
 /*!40000 ALTER TABLE `innodb_index_stats` DISABLE KEYS */;
-INSERT  IGNORE INTO `innodb_index_stats` VALUES ('capstone','building','PRIMARY','2020-11-24 06:46:48','n_diff_pfx01',0,1,'name'),('capstone','building','PRIMARY','2020-11-24 06:46:48','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','building','PRIMARY','2020-11-24 06:46:48','size',1,NULL,'Number of pages in the index'),('capstone','college','PRIMARY','2020-11-24 06:48:06','n_diff_pfx01',0,1,'name'),('capstone','college','PRIMARY','2020-11-24 06:48:06','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','college','PRIMARY','2020-11-24 06:48:06','size',1,NULL,'Number of pages in the index'),('capstone','department','PRIMARY','2020-11-24 06:55:02','n_diff_pfx01',0,1,'name'),('capstone','department','PRIMARY','2020-11-24 06:55:02','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','department','PRIMARY','2020-11-24 06:55:02','size',1,NULL,'Number of pages in the index'),('capstone','department','college_name','2020-11-24 06:55:02','n_diff_pfx01',0,1,'college_name'),('capstone','department','college_name','2020-11-24 06:55:02','n_diff_pfx02',0,1,'college_name,name'),('capstone','department','college_name','2020-11-24 06:55:02','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','department','college_name','2020-11-24 06:55:02','size',1,NULL,'Number of pages in the index'),('capstone','reservation','PRIMARY','2020-11-24 06:34:04','n_diff_pfx01',0,1,'id'),('capstone','reservation','PRIMARY','2020-11-24 06:34:04','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','reservation','PRIMARY','2020-11-24 06:34:04','size',1,NULL,'Number of pages in the index'),('capstone','reservation','room_id','2020-11-24 06:34:04','n_diff_pfx01',0,1,'room_id'),('capstone','reservation','room_id','2020-11-24 06:34:04','n_diff_pfx02',0,1,'room_id,id'),('capstone','reservation','room_id','2020-11-24 06:34:04','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','reservation','room_id','2020-11-24 06:34:04','size',1,NULL,'Number of pages in the index'),('capstone','reservation','user_id','2020-11-24 06:34:04','n_diff_pfx01',0,1,'user_id'),('capstone','reservation','user_id','2020-11-24 06:34:04','n_diff_pfx02',0,1,'user_id,id'),('capstone','reservation','user_id','2020-11-24 06:34:04','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','reservation','user_id','2020-11-24 06:34:04','size',1,NULL,'Number of pages in the index'),('capstone','room','PRIMARY','2020-11-24 06:48:51','n_diff_pfx01',0,1,'id'),('capstone','room','PRIMARY','2020-11-24 06:48:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','room','PRIMARY','2020-11-24 06:48:51','size',1,NULL,'Number of pages in the index'),('capstone','room','building','2020-11-24 06:48:51','n_diff_pfx01',0,1,'building'),('capstone','room','building','2020-11-24 06:48:51','n_diff_pfx02',0,1,'building,id'),('capstone','room','building','2020-11-24 06:48:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','room','building','2020-11-24 06:48:51','size',1,NULL,'Number of pages in the index'),('capstone','room','college','2020-11-24 06:48:51','n_diff_pfx01',0,1,'college'),('capstone','room','college','2020-11-24 06:48:51','n_diff_pfx02',0,1,'college,id'),('capstone','room','college','2020-11-24 06:48:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','room','college','2020-11-24 06:48:51','size',1,NULL,'Number of pages in the index'),('capstone','user','PRIMARY','2020-11-24 06:02:29','n_diff_pfx01',0,1,'id'),('capstone','user','PRIMARY','2020-11-24 06:02:29','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','user','PRIMARY','2020-11-24 06:02:29','size',1,NULL,'Number of pages in the index'),('mysql','component','PRIMARY','2020-11-17 08:26:08','n_diff_pfx01',0,1,'component_id'),('mysql','component','PRIMARY','2020-11-17 08:26:08','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','component','PRIMARY','2020-11-17 08:26:08','size',1,NULL,'Number of pages in the index'),('mysql','gtid_executed','PRIMARY','2020-11-17 08:26:08','n_diff_pfx01',0,1,'source_uuid'),('mysql','gtid_executed','PRIMARY','2020-11-17 08:26:08','n_diff_pfx02',0,1,'source_uuid,interval_start'),('mysql','gtid_executed','PRIMARY','2020-11-17 08:26:08','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_executed','PRIMARY','2020-11-17 08:26:08','size',1,NULL,'Number of pages in the index');
+INSERT  IGNORE INTO `innodb_index_stats` VALUES ('capstone','building','PRIMARY','2020-11-24 10:56:37','n_diff_pfx01',0,1,'id'),('capstone','building','PRIMARY','2020-11-24 10:56:37','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','building','PRIMARY','2020-11-24 10:56:37','size',1,NULL,'Number of pages in the index'),('capstone','college','PRIMARY','2020-11-24 10:58:53','n_diff_pfx01',0,1,'id'),('capstone','college','PRIMARY','2020-11-24 10:58:53','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','college','PRIMARY','2020-11-24 10:58:53','size',1,NULL,'Number of pages in the index'),('capstone','department','PRIMARY','2020-11-24 11:01:00','n_diff_pfx01',0,1,'id'),('capstone','department','PRIMARY','2020-11-24 11:01:00','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','department','PRIMARY','2020-11-24 11:01:00','size',1,NULL,'Number of pages in the index'),('capstone','department','college_name','2020-11-24 11:01:00','n_diff_pfx01',0,1,'college_name'),('capstone','department','college_name','2020-11-24 11:01:00','n_diff_pfx02',0,1,'college_name,id'),('capstone','department','college_name','2020-11-24 11:01:00','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','department','college_name','2020-11-24 11:01:00','size',1,NULL,'Number of pages in the index'),('capstone','purpose','PRIMARY','2020-11-24 11:03:04','n_diff_pfx01',0,1,'id'),('capstone','purpose','PRIMARY','2020-11-24 11:03:04','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','purpose','PRIMARY','2020-11-24 11:03:04','size',1,NULL,'Number of pages in the index'),('capstone','reservation','PRIMARY','2020-11-24 11:06:44','n_diff_pfx01',0,1,'id'),('capstone','reservation','PRIMARY','2020-11-24 11:06:44','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','reservation','PRIMARY','2020-11-24 11:06:44','size',1,NULL,'Number of pages in the index'),('capstone','reservation','purpose','2020-11-24 11:06:44','n_diff_pfx01',0,1,'purpose'),('capstone','reservation','purpose','2020-11-24 11:06:44','n_diff_pfx02',0,1,'purpose,id'),('capstone','reservation','purpose','2020-11-24 11:06:44','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','reservation','purpose','2020-11-24 11:06:44','size',1,NULL,'Number of pages in the index'),('capstone','reservation','room_id','2020-11-24 11:06:44','n_diff_pfx01',0,1,'room_id'),('capstone','reservation','room_id','2020-11-24 11:06:44','n_diff_pfx02',0,1,'room_id,id'),('capstone','reservation','room_id','2020-11-24 11:06:44','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','reservation','room_id','2020-11-24 11:06:44','size',1,NULL,'Number of pages in the index'),('capstone','reservation','user_id','2020-11-24 11:06:44','n_diff_pfx01',0,1,'user_id'),('capstone','reservation','user_id','2020-11-24 11:06:44','n_diff_pfx02',0,1,'user_id,id'),('capstone','reservation','user_id','2020-11-24 11:06:44','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','reservation','user_id','2020-11-24 11:06:44','size',1,NULL,'Number of pages in the index'),('capstone','room','PRIMARY','2020-11-24 06:48:51','n_diff_pfx01',0,1,'id'),('capstone','room','PRIMARY','2020-11-24 06:48:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','room','PRIMARY','2020-11-24 06:48:51','size',1,NULL,'Number of pages in the index'),('capstone','room','building','2020-11-24 06:48:51','n_diff_pfx01',0,1,'building'),('capstone','room','building','2020-11-24 06:48:51','n_diff_pfx02',0,1,'building,id'),('capstone','room','building','2020-11-24 06:48:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','room','building','2020-11-24 06:48:51','size',1,NULL,'Number of pages in the index'),('capstone','room','college','2020-11-24 06:48:51','n_diff_pfx01',0,1,'college'),('capstone','room','college','2020-11-24 06:48:51','n_diff_pfx02',0,1,'college,id'),('capstone','room','college','2020-11-24 06:48:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','room','college','2020-11-24 06:48:51','size',1,NULL,'Number of pages in the index'),('capstone','user','PRIMARY','2020-11-24 06:02:29','n_diff_pfx01',0,1,'id'),('capstone','user','PRIMARY','2020-11-24 06:02:29','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('capstone','user','PRIMARY','2020-11-24 06:02:29','size',1,NULL,'Number of pages in the index'),('mysql','component','PRIMARY','2020-11-17 08:26:08','n_diff_pfx01',0,1,'component_id'),('mysql','component','PRIMARY','2020-11-17 08:26:08','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','component','PRIMARY','2020-11-17 08:26:08','size',1,NULL,'Number of pages in the index'),('mysql','gtid_executed','PRIMARY','2020-11-17 08:26:08','n_diff_pfx01',0,1,'source_uuid'),('mysql','gtid_executed','PRIMARY','2020-11-17 08:26:08','n_diff_pfx02',0,1,'source_uuid,interval_start'),('mysql','gtid_executed','PRIMARY','2020-11-17 08:26:08','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_executed','PRIMARY','2020-11-17 08:26:08','size',1,NULL,'Number of pages in the index');
 /*!40000 ALTER TABLE `innodb_index_stats` ENABLE KEYS */;
 
 --
@@ -529,7 +557,7 @@ INSERT  IGNORE INTO `innodb_index_stats` VALUES ('capstone','building','PRIMARY'
 --
 
 /*!40000 ALTER TABLE `innodb_table_stats` DISABLE KEYS */;
-INSERT  IGNORE INTO `innodb_table_stats` VALUES ('capstone','building','2020-11-24 06:46:48',0,1,0),('capstone','college','2020-11-24 06:48:06',0,1,0),('capstone','department','2020-11-24 06:55:02',0,1,1),('capstone','reservation','2020-11-24 06:34:04',0,1,2),('capstone','room','2020-11-24 06:48:51',0,1,2),('capstone','user','2020-11-24 06:02:29',0,1,0),('mysql','component','2020-11-17 08:26:08',0,1,0),('mysql','gtid_executed','2020-11-17 08:26:08',0,1,0);
+INSERT  IGNORE INTO `innodb_table_stats` VALUES ('capstone','building','2020-11-24 10:56:37',0,1,0),('capstone','college','2020-11-24 10:58:53',0,1,0),('capstone','department','2020-11-24 11:01:00',0,1,1),('capstone','purpose','2020-11-24 11:03:04',0,1,0),('capstone','reservation','2020-11-24 11:06:44',0,1,3),('capstone','room','2020-11-24 06:48:51',0,1,2),('capstone','user','2020-11-24 06:02:29',0,1,0),('mysql','component','2020-11-17 08:26:08',0,1,0),('mysql','gtid_executed','2020-11-17 08:26:08',0,1,0);
 /*!40000 ALTER TABLE `innodb_table_stats` ENABLE KEYS */;
 
 --
@@ -1121,4 +1149,4 @@ CREATE TABLE IF NOT EXISTS `slow_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-24 16:01:54
+-- Dump completed on 2020-11-24 20:09:10
